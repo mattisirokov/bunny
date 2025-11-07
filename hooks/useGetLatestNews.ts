@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const LOCATION = "KUOPIO, FINLAND";
+const LOCATION = "NEW YORK, USA";
 const API_KEY = process.env.EXPO_PUBLIC_PERPLEXITY_API_KEY;
 const CHAT_URL = "https://api.perplexity.ai/chat/completions";
 
