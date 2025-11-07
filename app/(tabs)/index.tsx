@@ -1,20 +1,6 @@
 import { useGetLatestNews } from "@/hooks/useGetLatestNews";
-import { i, init } from "@instantdb/react-native";
+import "@/lib/db"; // Initialize database
 import { Button, StyleSheet, Text, View } from "react-native";
-
-const APP_ID = process.env.EXPO_PUBLIC_INSTANTDB_APP_ID;
-
-if (!APP_ID) {
-  throw new Error(
-    "EXPO_PUBLIC_INSTANTDB_APP_ID is not set in environment variables"
-  );
-}
-
-const schema = i.schema({
-  entities: {},
-});
-
-init({ appId: APP_ID, schema });
 
 function App() {
   const { isLoading, error, data, fetchNews } = useGetLatestNews();
